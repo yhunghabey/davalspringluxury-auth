@@ -27,7 +27,6 @@ route.get(
 
 route.get(
   "/user/:id",
-  guard(),
   controller.getUserById
 )
 
