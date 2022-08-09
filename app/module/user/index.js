@@ -26,6 +26,12 @@ route.get(
 );
 
 route.get(
+  "/user/:id",
+  guard(),
+  controller.getUserById
+)
+
+route.get(
   "/users",
   guard("all"),
   //joiValidator(validation.update),

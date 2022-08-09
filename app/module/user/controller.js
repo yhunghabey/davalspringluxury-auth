@@ -79,3 +79,11 @@ export async function updateAccountStatus(req, res, next) {
         next(err);
     }
 }
+
+export async function getUserById(req,res,next){
+    try {
+        return res.status(200).json(await service.getUserById(req.params))
+    } catch (err) {
+        next(err);
+    }
+}

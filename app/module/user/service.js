@@ -77,6 +77,17 @@ export async function login(body) {
     throw err;
   }
 }
+export async function getUserById(params) {
+  try {
+    const user = await User.findById(params.id);
+    return {
+      success,
+      data: user,
+    }
+  } catch (err) {
+    throw err;
+  }
+}
 
 export async function update(user, body) {
   try {
